@@ -1,23 +1,17 @@
-package search;
+package linearSearch;
 
 import java.util.Scanner;
 
-public class SeqSearchSen {
+public class SeqSearch {
 	
 	// 요소의 수가 n인 배열 a에서 key와 같은 요소를 선형 검색합니다. 
 	static int seqSeach(int[] a, int n, int key) {
 		
-		int i = 0;
-		
-		a[n] = key;
-		
-		while(true) {
+		for (int i = 0; i < a.length; i++) 
 			if(a[i] == key)
-				break;
-			i++;
-		}
-
-		return i == n ? -1 : i;
+				return i;
+		
+		return -1;
 	}
 	
 	public static void main(String[] args) {
